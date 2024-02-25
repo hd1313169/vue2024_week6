@@ -2,6 +2,7 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 
 const routes = [
   {
+    // 前台
     path: '/',
     component: () => import('../views/FrontView.vue'),
     children: [
@@ -25,6 +26,12 @@ const routes = [
       }
     ]
   },
+  // 登入頁
+  {
+    path: '/login',
+    component: () => import('../views/LoginView.vue')
+  },
+  // 後台
   {
     path: '/admin',
     component: () => import('../views/dashboard/DashBoard.vue'),
